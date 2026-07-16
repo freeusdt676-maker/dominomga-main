@@ -1,0 +1,11 @@
+ALTER TABLE public.games
+  ADD COLUMN IF NOT EXISTS game_mode text NOT NULL DEFAULT 'd120',
+  ADD COLUMN IF NOT EXISTS score_p1 numeric NOT NULL DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS score_p2 numeric NOT NULL DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS round_number integer NOT NULL DEFAULT 1;
+
+ALTER TABLE public.challenges
+  ADD COLUMN IF NOT EXISTS game_mode text NOT NULL DEFAULT 'd120';
+
+ALTER TABLE public.matchmaking_queue
+  ADD COLUMN IF NOT EXISTS game_mode text NOT NULL DEFAULT 'd120';

@@ -1,0 +1,1 @@
+UPDATE public.responsible_gaming SET self_excluded_until = NULL, updated_at = now() WHERE self_excluded_until IS NOT NULL;

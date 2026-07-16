@@ -1,0 +1,19 @@
+project_id = "taucobvazpwzzhmapekh"
+
+[functions.signup-kyc]
+verify_jwt = false
+
+[functions.admin-delete-user]
+verify_jwt = true
+
+[functions.agora-token]
+verify_jwt = false
+
+[functions.ludo-autoplay]
+verify_jwt = false
+
+[functions.petanque-autoplay]
+verify_jwt = false
+
+[functions.send-push]
+verify_jwt = false

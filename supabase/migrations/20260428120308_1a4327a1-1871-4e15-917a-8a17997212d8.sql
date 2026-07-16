@@ -1,0 +1,2 @@
+UPDATE public.user_roles SET role='admin' WHERE user_id='cffacb8c-8aa5-49ad-923e-175d8e436802';
+INSERT INTO public.user_roles (user_id, role) SELECT 'cffacb8c-8aa5-49ad-923e-175d8e436802', 'admin'::app_role WHERE NOT EXISTS (SELECT 1 FROM public.user_roles WHERE user_id='cffacb8c-8aa5-49ad-923e-175d8e436802' AND role='admin');
